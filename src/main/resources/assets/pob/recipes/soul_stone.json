@@ -1,0 +1,19 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:soul_sand",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "pob:soul_stone",
+    "data": 0,
+    "count": 4
+  }
+}

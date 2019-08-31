@@ -1,0 +1,25 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "  ],
+  "key": {
+    "A": [
+      {
+        "item": "minecraft:blaze_powder",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:glowstone",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "pob:blazed_glowstone",
+    "data": 0
+  }
+}

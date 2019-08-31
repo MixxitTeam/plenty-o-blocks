@@ -1,0 +1,7 @@
+{
+  "variants": {
+      "axis=y": { "model": "pob:sandstone_pillar" },
+      "axis=z": { "model": "pob:sandstone_pillar", "x": 90 },
+      "axis=x": { "model": "pob:sandstone_pillar", "x": 90, "y": 90 }
+  }
+}

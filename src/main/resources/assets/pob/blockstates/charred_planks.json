@@ -1,0 +1,7 @@
+{
+  "variants": {
+      "normal": [
+          { "model": "pob:charred_planks" }
+      ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+      "normal": [
+          { "model": "pob:soul_stone" }
+      ]
+  }
+}

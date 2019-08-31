@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:dirt",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:water_bucket",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "pob:mud",
+    "data": 0,
+    "count": 8
+  }
+}

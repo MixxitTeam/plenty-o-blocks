@@ -10,5 +10,10 @@ public class CreativeTab {
 		public ItemStack getTabIconItem() {
 			return new ItemStack(ModBlocks.roofTiles);
 		}
-	});
+			
+		@Override
+		public boolean hasSearchBar() {
+			return true;
+		}
+	}.setBackgroundImageName("item_search.png"));
 }

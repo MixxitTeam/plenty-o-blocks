@@ -1,6 +1,7 @@
 package init;
 
 import blocks.BlockBasic;
+import blocks.BlockDebug;
 import blocks.BlockGenericPillar;
 import blocks.BlockGenericStairs;
 import blocks.BlockMud;
@@ -29,16 +30,22 @@ public class ModBlocks {
 	public static Block roofTilesStairs;
 	public static Block sandstonePillar;
 	public static Block mud;
+	public static Block debugBlock;
 	
 	public static void init() {
+		// All resistance levels get multiplied by 3.
+		
 		flintBlock = new BlockBasic("flint_block", Material.ROCK).setHardness(5);
 		flintBlock.setHarvestLevel("pickaxe", 0);
+		SetBlockBlastResistance(flintBlock, 30f);
 		
 		flintBricks = new BlockBasic("flint_bricks", Material.ROCK).setHardness(2);
 		flintBricks.setHarvestLevel("pickaxe", 0);
+		SetBlockBlastResistance(flintBricks, 30f);
 		
 		charredPlanks = new BlockBasic("charred_planks", Material.WOOD, SoundType.WOOD).setHardness(1.5f);
 		charredPlanks.setHarvestLevel("axe", 0);
+		SetBlockBlastResistance(charredPlanks, 10f);
 		
 		blazedGlowstone = new BlockBasic("blazed_glowstone", Material.GLASS, SoundType.GLASS).setHardness(0.3f).setLightLevel(1f);
 
@@ -56,6 +63,12 @@ public class ModBlocks {
 		
 		mud = new BlockMud("mud", Material.SAND, SoundType.SLIME).setHardness(0.5f);
 		mud.setHarvestLevel("shovel", 0);
+		
+		debugBlock = new BlockDebug("debugblock", Material.ROCK).setHardness(0.1f);
+	}
+	
+	private static void SetBlockBlastResistance(Block block, float resistance) {
+		block.setResistance(resistance / 3f);
 	}
 	
 	@SubscribeEvent
@@ -69,6 +82,7 @@ public class ModBlocks {
 		event.getRegistry().registerAll(roofTilesStairs);
 		event.getRegistry().registerAll(sandstonePillar);
 		event.getRegistry().registerAll(mud);
+		event.getRegistry().registerAll(debugBlock);
 	}
 	
 	@SubscribeEvent
@@ -82,6 +96,7 @@ public class ModBlocks {
 		event.getRegistry().registerAll(new ItemBlock(roofTilesStairs).setRegistryName(roofTilesStairs.getRegistryName()));
 		event.getRegistry().registerAll(new ItemBlock(sandstonePillar).setRegistryName(sandstonePillar.getRegistryName()));
 		event.getRegistry().registerAll(new ItemBlock(mud).setRegistryName(mud.getRegistryName()));
+		event.getRegistry().registerAll(new ItemBlock(debugBlock).setRegistryName(debugBlock.getRegistryName()));
 	}
 	
 	@SubscribeEvent
@@ -95,6 +110,7 @@ public class ModBlocks {
 		registerRender(Item.getItemFromBlock(roofTilesStairs));
 		registerRender(Item.getItemFromBlock(sandstonePillar));
 		registerRender(Item.getItemFromBlock(mud));
+		registerRender(Item.getItemFromBlock(debugBlock));
 	}
 	
 	public static void registerRender(Item item) {

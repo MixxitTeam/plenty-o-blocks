@@ -33,8 +33,6 @@ public class ModBlocks {
 	public static Block debugBlock;
 	
 	public static void init() {
-		// All resistance levels get multiplied by 3.
-		
 		flintBlock = new BlockBasic("flint_block", Material.ROCK).setHardness(5);
 		flintBlock.setHarvestLevel("pickaxe", 0);
 		SetBlockBlastResistance(flintBlock, 30f);
@@ -54,6 +52,7 @@ public class ModBlocks {
 
 		roofTiles = new BlockBasic("roof_tiles", Material.ROCK).setHardness(2f);
 		roofTiles.setHarvestLevel("pickaxe", 0);
+		SetBlockBlastResistance(charredPlanks, 30f);
 
 		roofTilesStairs = new BlockGenericStairs("roof_tiles_stairs", roofTiles).setHardness(2f);
 		roofTilesStairs.setHarvestLevel("pickaxe", 0);

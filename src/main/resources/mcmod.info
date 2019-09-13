@@ -3,7 +3,7 @@
 	  "modid": "pob",
 	  "name": "Plenty o' Blocks",
 	  "description": "This mod adds a variety of new blocks to Minecraft.",
-	  "version": "1.0",
+	  "version": "0.01.0",
 	  "mcversion": "${mcversion}",
 	  "url": "https://mixxitteam.github.io/plentyoblocks/",
 	  "updateUrl": "",
